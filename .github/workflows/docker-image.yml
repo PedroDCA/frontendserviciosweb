@@ -1,7 +1,7 @@
 name: Build and deploy a container to an Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: servicioswebfront   # set this to your application's name
+  AZURE_WEBAPP_NAME: integrationulacit   # set this to your application's name
 
 on:
   push:
