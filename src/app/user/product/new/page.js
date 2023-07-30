@@ -1,6 +1,13 @@
+import InventoryCard from "@/components/cards/inventoryCard";
+
 export default function Home() {
   
   return (
-    <div>Aqui se ven todos los productos</div>
+    <div className="d-flex justify-content-center align-items-center content-container card-list">
+      <InventoryCard/>
+      <InventoryCard/>
+      <InventoryCard/>
+      <InventoryCard/>
+    </div>
   );
 }

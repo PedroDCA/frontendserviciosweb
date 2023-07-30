@@ -1,6 +1,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  background-color: #F3F5F8;
 }
 
 html {
@@ -77,4 +78,32 @@ main {
 
 .white-color{
   color: white !important;
+}
+
+.content-container{
+  width: 100%;
+}
+
+.card {
+  width: 33%;
+  height: 12%;
+  max-width: 200px;
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 11px 0 rgba(0, 0, 0, 0.14);
+}
+
+.card-list {
+  column-gap: 20px
+}
+
+.inventory-icon {
+  height: 100%;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  align-content: center;
+}
+
+.title-card {
+  height: 40%;
 }

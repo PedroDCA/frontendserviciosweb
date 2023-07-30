@@ -1,4 +1,4 @@
-import Sidebar from '@/components/sidebar'
+import Sidebar from '@/components/sidebar/sidebar'
 import '../globals.css'
 
 export const metadata = {

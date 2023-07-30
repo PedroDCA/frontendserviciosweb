@@ -1,38 +1,16 @@
-'use client'
-
-
 import { getAllProductsApiUrl } from "@/routing/apiRoutes";
-import { useState } from "react";
+import Page1 from "./page1";
 
 async function getAllProducts() {
-  const response = await fetch(getAllProductsApiUrl, {
+  const response = await fetch(`http://localhost:3000${getAllProductsApiUrl}`, {
     method: 'GET',
   });
   return response.json();
 }
 
-export default function Page({productsAPI}) {
-  const [products, setProducts] = useState(productsAPI);
-
-  async function updateAllProducts() {
-    const allProducts = await getAllProducts();
-    setProducts(allProducts);
-  }
-  
-  return (
-    <div>
-      <button onClick={updateAllProducts}>Click</button>
-      {products.map((product, index) => {
-        return (<p key={index}>{product.name}</p>)
-      })}
-    </div>
-  );
-}
-
-export async function getServerSideProps() {
+export default async function Page() {
   const productsAPI = await getAllProducts();
-  console.log(productsAPI);
-  return {
-    props: { productsAPI }, // will be passed to the page component as props
-  }
+  return (
+    <Page1 productsAPI={productsAPI}/>
+  );
 }
