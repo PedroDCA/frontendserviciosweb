@@ -1,8 +1,10 @@
 import { getAllProductsApiUrl } from "@/routing/apiRoutes";
 import Page1 from "./page1";
+import { getHostName } from "@/services/urlGenerator";
 
 async function getAllProducts() {
-  const response = await fetch(`http://localhost:3000${getAllProductsApiUrl}`, {
+  const hostname = getHostName();
+  const response = await fetch(`${hostname}${getAllProductsApiUrl}`, {
     method: 'GET',
   });
   return response.json();

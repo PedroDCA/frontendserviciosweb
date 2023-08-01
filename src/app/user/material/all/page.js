@@ -12,7 +12,7 @@ async function getAllProducts() {
 }
 
 export default function Page1({productsAPI}) {
-  const [products, setProducts] = useState(productsAPI);
+  const [products, setProducts] = useState(productsAPI || []);
 
   async function updateAllProducts() {
     const allProducts = await getAllProducts();
