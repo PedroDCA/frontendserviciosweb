@@ -13,6 +13,13 @@ permissions:
   packages: 'write'
 
 jobs:
+  createEnv:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Make envfile
+      run: |
+        touch .env
+        echo "${{ vars.ENV_FILE }}" > .env
   build:
     runs-on: ubuntu-latest
 
