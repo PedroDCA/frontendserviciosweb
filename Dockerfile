@@ -30,7 +30,8 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN echo "HOSTNAME='https://127.0.0.1:3000'" > .env
+RUN echo cat /run/secrets/ENV_FILE > .env
+RUN cat .env
 RUN ls -a
 RUN npm run build
 
