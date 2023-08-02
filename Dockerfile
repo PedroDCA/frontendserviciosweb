@@ -31,7 +31,7 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN --mount=type=secret,id=ENV_FILE
-RUN echo /run/secrets/ENV_FILE
+RUN echo $(cat /run/secrets/API_ENDPOINT) > .env
 RUN cat .env
 RUN ls -a
 RUN npm run build
