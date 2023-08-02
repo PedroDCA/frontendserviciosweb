@@ -19,6 +19,7 @@ jobs:
     - name: Make envfile
       run: |
         touch .env
+        echo "${{ vars.ENV_FILE }}"
         echo "${{ vars.ENV_FILE }}" > .env
         
   build:
