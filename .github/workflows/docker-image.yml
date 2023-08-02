@@ -12,14 +12,22 @@ permissions:
   contents: 'read'
   packages: 'write'
 
-env:
-  HOSTNAME: ${{ vars.HOSTNAME }}
-
 jobs:
+  createEnv:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Make envfile
+      run: |
+        touch .env
+        echo "${{ vars.ENV_FILE }}" > .env
+        
   build:
     runs-on: ubuntu-latest
 
     needs: createEnv
+
+    environment:
+      HOSTNAME: ${{ vars.HOSTNAME }}
 
     steps:
       - uses: actions/checkout@v3
