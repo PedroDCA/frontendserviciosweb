@@ -35,8 +35,6 @@ jobs:
       - name: Lowercase the repo name
         run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
 
-      - name: Creating env file
-
       - name: Build and push container image to registry
         uses: docker/build-push-action@v4
         with:
