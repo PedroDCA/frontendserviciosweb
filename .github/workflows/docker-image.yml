@@ -26,6 +26,10 @@ jobs:
 
     needs: createEnv
 
+    environment:
+      name: 'production'
+      HOSTNAME: ${{ vars.HOSTNAME }}
+
     steps:
       - uses: actions/checkout@v3
 
