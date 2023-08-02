@@ -19,7 +19,6 @@ RUN \
   fi
 
 
-RUN ls -a
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
@@ -31,6 +30,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
+RUN echo "HOSTNAME='https://127.0.0.1:3000'" > .env
 RUN ls -a
 RUN npm run build
 
