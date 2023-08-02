@@ -4,6 +4,7 @@ import { getHostName } from "@/services/urlGenerator";
 
 async function getAllProducts() {
   const hostname = getHostName();
+  console.log(hostname)
   const response = await fetch(`${hostname}${getAllProductsApiUrl}`, {
     method: 'GET',
   });
