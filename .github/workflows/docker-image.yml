@@ -41,7 +41,7 @@ jobs:
           push: true
           tags: ghcr.io/${{ env.REPO }}:${{ github.sha }}
           secrets: |
-            ENV_FILE=HOSTNAME=${{ env.GITHUB_SERVER_URL  }}
+            HOSTNAME=${{ env.GITHUB_SERVER_URL  }}
           file: ./Dockerfile
 
   deploy:
