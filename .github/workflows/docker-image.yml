@@ -12,15 +12,7 @@ permissions:
   contents: 'read'
   packages: 'write'
 
-jobs:
-  createEnv:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Make envfile
-      run: |
-        touch .env
-        echo "${{ vars.ENV_FILE }}" > .env
-        
+jobs:        
   build:
     runs-on: ubuntu-latest
 
@@ -46,11 +38,6 @@ jobs:
         run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
 
       - name: Creating env file
-        run: |
-          touch .env
-          echo "${{ vars.ENV_FILE }}"
-          echo "${{ vars.ENV_FILE }}" > .env
-          cat .env
 
       - name: Build and push container image to registry
         uses: docker/build-push-action@v4
