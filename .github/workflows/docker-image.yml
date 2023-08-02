@@ -21,6 +21,7 @@ jobs:
         touch .env
         echo "${{ vars.ENV_FILE }}"
         echo "${{ vars.ENV_FILE }}" > .env
+        ls
         
   build:
     runs-on: ubuntu-latest
