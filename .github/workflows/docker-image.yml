@@ -42,6 +42,7 @@ jobs:
           tags: ghcr.io/${{ env.REPO }}:${{ github.sha }}
           secrets: |
             ENV_FILE=${{ vars.ENV_FILE }}
+          no-cache: true
           file: ./Dockerfile
 
   deploy:
