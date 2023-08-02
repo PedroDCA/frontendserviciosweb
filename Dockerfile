@@ -31,7 +31,8 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN --mount=type=secret,id=ENV_FILE \
-  cat /run/secrets/ENV_FILE
+  cp /run/secrets/ENV_FILE .env
+RUN echo .env
 RUN ls -a
 RUN npm run build
 
