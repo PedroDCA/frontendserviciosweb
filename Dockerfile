@@ -28,7 +28,9 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN --mount=type=secret,id=ENV_FILE \
-  cat /run/secrets/ENV_FILE > .env
+  if [ -f /run/secrets/ENV_FILE ]; then cat /run/secrets/ENV_FILE > .env; \
+  fi
+
 RUN npm run build
 
 # If using npm comment out above and use below instead
