@@ -1,9 +1,11 @@
+import { getAllProductsApiUrl } from "@/routing/apiRoutes";
 import Page1 from "./page1";
-import { GET } from "@/app/api/product/all/route";
+import { getHostName } from "@/services/urlGenerator";
 
 async function getAllProducts() {
-  const response = await GET();
-  return response.json();
+  const hostname = getHostName();
+  const response = [];
+  return response;
 }
 
 export default async function Page() {
