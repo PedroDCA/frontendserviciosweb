@@ -1,13 +1,10 @@
 'use client'
 
-
-import { getAllProductsApiUrl } from "@/routing/apiRoutes";
+import { GET } from "@/app/api/product/all/route";
 import { useState } from "react";
 
 async function getAllProducts() {
-  const response = await fetch(getAllProductsApiUrl, {
-    method: 'GET',
-  });
+  const response = await GET()
   return response.json();
 }
 

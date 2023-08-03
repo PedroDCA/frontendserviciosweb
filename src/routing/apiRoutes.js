@@ -1,1 +1,0 @@
-export const getAllProductsApiUrl = '/api/product/all';
