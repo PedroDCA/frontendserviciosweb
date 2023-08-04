@@ -14,16 +14,11 @@ export const addNewMaterial = async (name) => {
 
 export const getAllMaterials = async () => {
   const materialsFromAPI = await getAllMaterialsEndpoint();
-  const materials = materialsFromAPI.map(material => {
-    const processDataFormatted = material.processDataRequired.map((processData) => ({name: processData.Name, id: processData.Id}));
-    const formattedMaterial = {
-      name: material.Name,
-      quantity: material.Quantity,
-      processDataRequired: processDataFormatted
-    };
-
-    return formattedMaterial;
-  });
+  const materials = materialsFromAPI.map(material => ({
+      id: material.id,
+      name: material.name,
+      quantity: material.quantity
+    }));
 
   return materials; 
 };
