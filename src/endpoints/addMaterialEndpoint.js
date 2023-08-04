@@ -1,5 +1,6 @@
 import { addMaterialUrl } from "../routing/backendRoutes";
-export default async (name) => {
+
+const addMaterialEndpoint = async (name) => {
   const data = {
     name,
   };
@@ -12,3 +13,5 @@ export default async (name) => {
   });
   return response.json();
 };
+
+export default addMaterialEndpoint;

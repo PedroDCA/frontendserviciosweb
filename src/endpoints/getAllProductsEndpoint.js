@@ -1,6 +1,8 @@
 import { getAllProductsUrl } from "@/routing/backendRoutes";
 
-export default async () => {
+const getAllProductsEndpoint = async () => {
   const response = await fetch(getAllProductsUrl);
   return response.json();
 };
+
+export default getAllProductsEndpoint;

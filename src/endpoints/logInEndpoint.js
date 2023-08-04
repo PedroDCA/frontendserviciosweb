@@ -1,5 +1,6 @@
 import { logInUrl } from "../routing/backendRoutes";
-export default async (email, password) => {
+
+const logInEndpoint = async (email, password) => {
   const encryptedPassword = crypto.subtle.digest("SHA-256", password);
   const data = {
     email,
@@ -14,3 +15,5 @@ export default async (email, password) => {
   });
   return response.json();
 };
+
+export default logInEndpoint;
