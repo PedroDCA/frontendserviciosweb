@@ -1,10 +1,8 @@
 import MaterialList from "@/components/pages/materialList";
 import { getAllMaterials } from "@/services/materialService";
 
-
 async function getMaterials(){
   'use server'
-  
   return await getAllMaterials();
 }
 

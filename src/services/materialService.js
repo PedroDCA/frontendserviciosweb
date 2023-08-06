@@ -1,12 +1,12 @@
 import addMaterialEndpoint from "../endpoints/addMaterialEndpoint"
 import getAllMaterialsEndpoint from "../endpoints/getAllMaterialsEndpoint";
 
-export const addNewMaterial = async (name) => {
-  const response = await addMaterialEndpoint(name);
+export const addNewMaterial = async (materialInformation) => {
+  const response = await addMaterialEndpoint(materialInformation);
+  const wasMaterialCreated = response?.id && Number(response?.id) > 0;
   const data = {
-    materialId: response.Id,
-    wasMaterialCreated: response.Successful,
-    error: response.Error,
+    materialId: response.id,
+    wasMaterialCreated,
   };
 
   return data; 
