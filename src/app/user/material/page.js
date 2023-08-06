@@ -1,4 +1,4 @@
-import MaterialList from "@/components/pages/materialList";
+import MaterialList from "@/components/pages/material/materialList";
 import { getAllMaterials } from "@/services/materialService";
 
 async function getMaterials(){

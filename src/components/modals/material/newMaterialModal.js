@@ -1,40 +1,4 @@
-'use client';
-
-import { Modal } from 'bootstrap';
-
-export default function NewMaterialModal({saveMaterial}) {
-  async function SaveButtonClick() {
-    const materialNameElement = document.querySelector('[data-modal-material-name]');
-    const materialName = materialNameElement.value.trim();
-    if (!materialName) {
-      alert('Por favor, agregue un nombre');
-      return;
-    }
-
-    const materialSizeElement = document.querySelector('[data-modal-size]');
-    const materialSize = Number(materialSizeElement.value);
-    if (materialSize < 0) {
-      alert('Por favor, ingrese un valor no negativo');
-      return;
-    }
-
-    const materialInformation = {
-      name: materialName,
-      quantity: materialSize,
-    }
-    const isMaterialSaved = await saveMaterial(materialInformation);
-    const message = isMaterialSaved ? 'El material se ha guardado correctamente' : 'No se ha podido guardar el material, por favor inténtelo de nuevo';
-    alert(message);
-    closeModal();
-  }
-
-  function closeModal() {
-    const modalElement = document.getElementById('newMaterialModal');
-    const modal = Modal.getInstance(modalElement);
-
-    modal.hide();
-  }
-
+export default function NewMaterialModal() {
   return (
     <div>
       <div className="modal fade" id="newMaterialModal" tabIndex="-1" aria-labelledby="newMaterialModalLabel" aria-hidden="true" data-modal>
@@ -53,7 +17,7 @@ export default function NewMaterialModal({saveMaterial}) {
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" className="btn btn-primary" onClick={SaveButtonClick} >Crear</button>
+              <button type="button" className="btn btn-primary" data-save-material>Crear</button>
             </div>
           </div>
         </div>
