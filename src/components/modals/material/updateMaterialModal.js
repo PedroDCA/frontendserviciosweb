@@ -1,5 +1,5 @@
 import UpdateModal from "../base/updateModal";
 
-export default function UpdateInventoryModal() {
+export default function UpdateMaterialModal() {
   return (<UpdateModal/>)
 }
