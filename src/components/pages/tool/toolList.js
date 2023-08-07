@@ -25,8 +25,8 @@ export default function ToolList({initialTools}) {
         <button data-new-inventory-button className="add-button"/>
       </div>
       <div className="d-flex justify-content-center align-items-center content-container card-list" data-card-list>
-        {tools.map((product, index) => {
-          return (<InventoryCard elementName={product.name} elementId={product.id} elementQuantity={product.quantity} key={index}/>)
+        {tools.map((tool, index) => {
+          return (<InventoryCard elementName={tool.name} elementId={tool.id} elementQuantity={tool.quantity} key={index}/>)
         })}
       </div>
     </div>
