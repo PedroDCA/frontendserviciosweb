@@ -1,4 +1,4 @@
-import { logInUrl } from "../routing/backendRoutes";
+import { logInUrl } from "../../routing/backendRoutes";
 
 const logInEndpoint = async (email, password) => {
   const encryptedPassword = crypto.subtle.digest("SHA-256", password);

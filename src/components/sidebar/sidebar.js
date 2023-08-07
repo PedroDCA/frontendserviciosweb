@@ -7,7 +7,7 @@ const dashboardOption = {
   title: 'Dashboard',
   options: [
     {
-      link: '#',
+      link: '/user/dashboard',
       name: 'Ver calendario'
     }
   ]
@@ -17,13 +17,9 @@ const workersOption = {
   title: 'Trabajadores',
   options: [
     {
-      link: '#',
+      link: '/user/worker',
       name: 'Ver todos'
-    },
-    {
-      link: '#',
-      name: 'Crear nuevo trabajador'
-    },
+    }
   ]
 };
 
@@ -31,12 +27,18 @@ const toolsOption = {
   title: 'Herramientas',
   options: [
     {
-      link: '#',
+      link: '/user/tool',
       name: 'Ver todas'
     },
+  ]
+};
+
+const materialsOption = {
+  title: 'Materiales',
+  options: [
     {
-      link: '#',
-      name: 'Crear nueva herramienta'
+      link: '/user/material',
+      name: 'Ver todos'
     },
   ]
 };
@@ -45,17 +47,17 @@ const productionChainOption = {
   title: 'Cadenas de producción',
   options: [
     {
-      link: '/user/product/all',
-      name: 'Ver todas'
+      link: '/user/product/create',
+      name: 'Crear nuevo plano de producción'
     },
     {
-      link: '/user/product/new',
-      name: 'Crear nueva cadena de produccion para producto'
+      link: '/user/product/start',
+      name: 'Crear nueva producción'
     },
   ]
 };
 
-const optionList = [dashboardOption, workersOption, toolsOption, productionChainOption];
+const optionList = [dashboardOption, workersOption, toolsOption, materialsOption, productionChainOption];
 
 export default function Sidebar() {
   useEffect(() => {
