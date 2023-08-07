@@ -1,5 +1,5 @@
-import logInEndpoint from '../endpoints/logInEndpoint';
-import signUpEndpoint from '../endpoints/signUpEndpoint';
+import logInEndpoint from '../endpoints/sessionEndpoints/logInEndpoint';
+import signUpEndpoint from '../endpoints/sessionEndpoints/signUpEndpoint';
 
 /**
  * logInUser: Starts the log in process to log in the user into the page with its credentials.

@@ -1,5 +1,5 @@
-import addMaterialEndpoint from "../endpoints/addMaterialEndpoint"
-import getAllMaterialsEndpoint from "../endpoints/getAllMaterialsEndpoint";
+import addMaterialEndpoint from "../endpoints/materialEndpoints/addMaterialEndpoint"
+import getAllMaterialsEndpoint from "../endpoints/materialEndpoints/getAllMaterialsEndpoint";
 
 export const addNewMaterial = async (materialInformation) => {
   const response = await addMaterialEndpoint(materialInformation);

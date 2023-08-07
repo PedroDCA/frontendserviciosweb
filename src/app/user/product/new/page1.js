@@ -1,8 +1,8 @@
 'use client';
 
 import InventoryCard from "@/components/cards/inventoryCard";
-import NewMaterialModal from "@/components/modals/material/newMaterialModal";
-import UpdateMaterialModal from "@/components/modals/material/updateMaterialModal";
+import newInventoryModal from "@/components/modals/base/newInventoryModal";
+import UpdateMaterialModal from "@/components/modals/base/updateInventoryModal";
 
 export default function Home() {
   function saveChangesClick() {
@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <div className="p-5 w-100">
       <UpdateMaterialModal saveChangesFunction={saveChangesClick}/>
-      <NewMaterialModal/>
+      <newInventoryModal/>
       <div className="d-flex justify-content-between align-items-center">
         <h2 className="p-4">Lista de materiales</h2>
-        <button data-bs-toggle="modal" data-bs-target="#newMaterialModal" className="add-button"/>
+        <button data-bs-toggle="modal" data-bs-target="#newInventoryModal" className="add-button"/>
       </div>
       <div className="d-flex justify-content-center align-items-center content-container card-list">
         <InventoryCard elementName='Mercurio' elementId='1' elementQuantity='3'/>

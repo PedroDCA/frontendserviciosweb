@@ -1,4 +1,4 @@
-import { signUpUrl } from "../routing/backendRoutes";
+import { signUpUrl } from "../../routing/backendRoutes";
 
 const signUpEndpoint = async (email, password, name, lastName, roleId) => {
   const encryptedPassword = crypto.subtle.digest("SHA-256", password);
