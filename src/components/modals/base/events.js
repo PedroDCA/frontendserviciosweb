@@ -70,7 +70,7 @@ async function saveButtonClick() {
   }
 
   const createNewInventoryElement = document.querySelector('[data-inventory-category]');
-  const inventoryCategory = createInventoryMapper.dataset.inventoryCategory;
+  const inventoryCategory = createNewInventoryElement.dataset.inventoryCategory;
 
   const inventoryInformation = {
     name: inventoryName,
