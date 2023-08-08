@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export default function ToolList({initialTools}) {
   const [tools, setTools] = useState(initialTools || []);
   useEffect(() => {
-    require('../../modals/base/events');
+    require('../../../events/modals/base/inventoryModalUpdates');
   }, []);
 
   const inventoryConfiguration = {
@@ -17,7 +17,7 @@ export default function ToolList({initialTools}) {
   };
 
   return (
-    <div className="p-5 w-100">
+    <div>
       <UpdateMaterialModal inventoryConfiguration={inventoryConfiguration}/>
       <NewInventoryModal inventoryConfiguration={inventoryConfiguration}/>
       <div className="d-flex justify-content-between align-items-center">

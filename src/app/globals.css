@@ -2,6 +2,7 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   background-color: #F3F5F8;
+  overflow: auto;
 }
 
 html {
@@ -12,8 +13,8 @@ main {
   height: 100vh;
   height: -webkit-fill-available;
   max-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .dropdown-toggle { outline: 0; }
@@ -58,6 +59,8 @@ main {
   width: 280px;
   height: 100vh;
   background-color: #24344B;
+  position: sticky;
+  top: 0;
 }
 
 .sidebar-list{
@@ -131,4 +134,37 @@ main {
   background-position: center;
   background-size: 80%;
   fill: aqua;
+}
+
+.new_process{
+  width: 30%;
+  height: 10%;
+  background-color: white;
+}
+
+.new_process button{
+  width: 100%;
+  padding: 15px;
+}
+
+.process_list{
+  row-gap: 10px;
+}
+
+.new_process .material_information{
+  justify-content: space-between;
+}
+
+.new_process p{
+  margin: 0;
+}
+
+.option-line{
+  row-gap: 5px;
+}
+
+.new_process .option{
+  cursor: pointer;
+  width: fit-content;
+  margin-left: auto
 }
