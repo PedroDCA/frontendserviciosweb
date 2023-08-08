@@ -83,7 +83,12 @@ async function saveButtonClick() {
   closeNewInventoryModal();
 }
 
-function openNewInventoryModal(){    
+function openNewInventoryModal(event){    
+  const newInventoryButton = event.target.closest('[data-new-inventory-button]');
+  if (!newInventoryButton) {
+    return;
+  }
+
   const modalElement = document.getElementById('newInventoryModal');
   const modal = Modal.getInstance(modalElement) || new Modal(modalElement);
 
@@ -93,7 +98,12 @@ function openNewInventoryModal(){
 const saveMaterialElement = document.querySelector('[data-create-inventory]');
 saveMaterialElement.addEventListener('click', saveButtonClick);
 
-function saveChangesClick() {
+function saveChangesClick(event) {
+  const saveChangesButton = event.target.closest('[data-update-type] [data-save]');
+  if (!saveChangesButton) {
+    return;
+  }
+
   const modal = document.querySelector('[data-update-type]');
   const modalMaterialIdElement = modal.querySelector('[data-modal-inventory-id]');
   
@@ -132,12 +142,7 @@ function openUpdateModal(event) {
   modal.show();
 }
 
-
-const updateSaveElement = document.querySelector('[data-update-type] [data-save]');
-updateSaveElement.addEventListener('click', saveChangesClick);
-
-const newInventoryButton = document.querySelector('[data-new-inventory-button]');
-newInventoryButton.addEventListener('click', openNewInventoryModal);
-
-const cardListContainer = document.querySelector('[data-card-list]');
-cardListContainer.addEventListener('click', openUpdateModal);
+const mainSection = document.querySelector('main');
+mainSection.addEventListener('click', openUpdateModal);
+mainSection.addEventListener('click', saveChangesClick);
+mainSection.addEventListener('click', openNewInventoryModal);

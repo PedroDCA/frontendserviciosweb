@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
-import ExpandableOption from './expandableOption';
+import ExpandableOption from '../dropdown/base/expandableOption';
+import { useEffect } from "react";
 const dashboardOption = {
   title: 'Dashboard',
   options: [
@@ -61,7 +61,7 @@ const optionList = [dashboardOption, workersOption, toolsOption, materialsOption
 
 export default function Sidebar() {
   useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+    require('../../events/dropdown/base/collapseToggle');
   }, []);
   return (
     <div className="flex-shrink-0 sidebar">

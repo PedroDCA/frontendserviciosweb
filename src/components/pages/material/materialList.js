@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export default function MaterialList({initialMaterials}) {
   const [materials, setMaterials] = useState(initialMaterials || []);
   useEffect(() => {
-    require('../../modals/base/events');
+    require('../../../events/modals/base/inventoryModalUpdates');
   }, []);
 
   const inventoryConfiguration = {
@@ -17,7 +17,7 @@ export default function MaterialList({initialMaterials}) {
   };
 
   return (
-    <div className="p-5 w-100">
+    <div>
       <UpdateInventoryModal inventoryConfiguration={inventoryConfiguration}/>
       <NewInventoryModal inventoryConfiguration={inventoryConfiguration}/>
       <div className="d-flex justify-content-between align-items-center">

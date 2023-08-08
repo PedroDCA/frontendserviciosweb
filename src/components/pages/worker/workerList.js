@@ -8,11 +8,11 @@ import { useEffect, useState } from "react";
 export default function WorkerList({initialWorkers}) {
   const [workers, setWorkers] = useState(initialWorkers || []);
   useEffect(() => {
-    require('../../modals/worker/events');
+    require('../../../events/modals/worker/workerModalUpdates');
   }, []);
 
   return (
-    <div className="p-5 w-100">
+    <div>
       <NewWorkerModal/>
       <div className="d-flex justify-content-between align-items-center">
         <h2 className="p-4">Lista de trabajadores</h2>
