@@ -163,8 +163,13 @@ main {
   row-gap: 5px;
 }
 
-.new_process .option{
+.planning_options .option{
   cursor: pointer;
   width: fit-content;
-  margin-left: auto
+  margin-left: auto;
+  text-decoration: underline;
+}
+
+.add_process{
+  width: 30%;
 }
