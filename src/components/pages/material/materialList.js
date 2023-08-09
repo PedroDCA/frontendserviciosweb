@@ -15,7 +15,7 @@ export default function MaterialList({initialMaterials}) {
     inventoryCategory: 'material',
     inventoryName: 'Material'
   };
-
+  
   return (
     <div>
       <UpdateInventoryModal inventoryConfiguration={inventoryConfiguration}/>

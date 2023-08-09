@@ -9,3 +9,4 @@ export const getAllMaterialsUrl = `${baseUrl}/Material/GetAllMaterials`;
 export const getAllToolsUrl = `${baseUrl}/Tool/GetAllTools`;
 export const getAllWorkersUrl = `${baseUrl}/Employee/GetAllEmployes`;
 export const getAllProductsUrl = `${baseUrl}/Product/GetAllProducts`;
+export const getProductionPlanningUrl = `${baseUrl}/Production/GetPlanning`;
