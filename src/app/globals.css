@@ -173,3 +173,8 @@ main {
 .add_process{
   width: 30%;
 }
+
+[data-calendar-container] {
+  width: 75%;
+  height: 80%;
+}
