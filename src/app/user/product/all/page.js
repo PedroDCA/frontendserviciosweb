@@ -4,10 +4,12 @@ import { getHostName } from "@/services/urlGenerator";
 
 async function getAllProducts() {
   const hostname = getHostName();
+  console.log(`${hostname}${getAllProductsApiUrl}`)
   const response = await fetch(`${hostname}${getAllProductsApiUrl}`, {
     method: 'GET',
   });
-  return response.json();
+  console.log("hola")
+  return await response.json();
 }
 
 export default async function Page() {
