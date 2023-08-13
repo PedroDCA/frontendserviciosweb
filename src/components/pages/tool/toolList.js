@@ -1,5 +1,6 @@
 'use client';
 
+import InformationCard from "@/components/cards/informationCard";
 import InventoryCard from "@/components/cards/inventoryCard";
 import NewInventoryModal from "@/components/modals/base/newInventoryModal";
 import UpdateMaterialModal from "@/components/modals/base/updateInventoryModal";
@@ -18,7 +19,6 @@ export default function ToolList({initialTools}) {
 
   return (
     <div>
-      <UpdateMaterialModal inventoryConfiguration={inventoryConfiguration}/>
       <NewInventoryModal inventoryConfiguration={inventoryConfiguration}/>
       <div className="d-flex justify-content-between align-items-center">
         <h2 className="p-4">Lista de herramientas</h2>
@@ -26,7 +26,7 @@ export default function ToolList({initialTools}) {
       </div>
       <div className="d-flex justify-content-center align-items-center content-container card-list" data-card-list>
         {tools.map((tool, index) => {
-          return (<InventoryCard elementName={tool.name} elementId={tool.id} elementQuantity={tool.quantity} key={index}/>)
+          return (<InformationCard elementName={tool.name} elementInformation={'Disponible'} key={index}/>)
         })}
       </div>
     </div>
