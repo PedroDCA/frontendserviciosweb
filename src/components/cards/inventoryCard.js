@@ -1,6 +1,19 @@
 'use client';
 
-export default function InventoryCard({elementName, elementId, elementQuantity}){
+export default function InventoryCard({elementName, elementId, elementQuantity, setIsUpdatingInventoryModalOpened}){
+  function openUpdateModal(event) {
+    const clickedElement = event.target;
+    const { elementName, elementId } = clickedElement.dataset;
+    const updateModalElement = document.getElementById('updateModal');
+    const modalMaterialElement = updateModalElement.querySelector('[data-modal-inventory-name]');
+    const modalMaterialIdElement = updateModalElement.querySelector('[data-modal-inventory-id]');
+  
+    modalMaterialElement.textContent = elementName;
+    modalMaterialIdElement.value = elementId;
+  
+    setIsUpdatingInventoryModalOpened(true);
+  }
+  
   return (
     <div className="card p-1">
       <div className="title-card d-flex justify-content-start align-items-center">
@@ -11,7 +24,7 @@ export default function InventoryCard({elementName, elementId, elementQuantity})
       </div>
       <p>
         Cantidad: {elementQuantity}
-        <button data-open-update-modal data-element-name={elementName} data-element-id={elementId}>Modificar inventario</button>
+        <button onClick={openUpdateModal} data-element-name={elementName} data-element-id={elementId}>Modificar inventario</button>
       </p>
     </div>
   )

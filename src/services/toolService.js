@@ -1,6 +1,5 @@
 import addToolEndpoint from "@/endpoints/toolEndpoints/addToolEndpoint";
 import getAllToolsEndpoint from "@/endpoints/toolEndpoints/getAllToolsEndpoint";
-import updateToolEndpoint from "@/endpoints/toolEndpoints/updateToolEndpoint";
 
 export const addNewTool = async (toolInformation) => {
   const response = await addToolEndpoint(toolInformation);
@@ -23,10 +22,3 @@ export const getAllTools = async () => {
 
   return tools; 
 };
-
-export const updateTool = async (toolInformation) => {
-  const response = await updateToolEndpoint(toolInformation);
-  const wasToolUpdated = response.wasToolUpdated;
-
-  return wasToolUpdated;
-}
