@@ -1,3 +1,4 @@
+import updateMaterialEndpoint from "@/endpoints/materialEndpoints/updateMaterialEndpoint";
 import addMaterialEndpoint from "../endpoints/materialEndpoints/addMaterialEndpoint"
 import getAllMaterialsEndpoint from "../endpoints/materialEndpoints/getAllMaterialsEndpoint";
 
@@ -21,4 +22,9 @@ export const getAllMaterials = async () => {
     }));
 
   return materials; 
+};
+
+export const updateMaterial = async (materialInformation) => {
+  const materialsFromAPI = await updateMaterialEndpoint(materialInformation);
+  return materialsFromAPI; 
 };
