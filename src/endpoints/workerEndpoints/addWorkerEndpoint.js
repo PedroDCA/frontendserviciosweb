@@ -3,7 +3,7 @@ import { addWorkerUrl } from "@/routing/backendRoutes";
 
 const addWorkerEndpoint = async (workerInformation) => {
   const data = {
-    firstName: workerInformation.firstName,
+    name: workerInformation.firstName,
     lastName: workerInformation.lastName,
     roleId: workerInformation.roleId,
   };

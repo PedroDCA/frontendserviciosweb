@@ -1,31 +1,33 @@
 'use client';
 
-import ExistingProcess from "@/components/dropdown/base/existingProcess";
-import { getProcessesByProductIdUrl } from "@/routing/apiRoutes";
 import { Calendar } from "@fullcalendar/core";
-import { useEffect, useState } from "react";
-import FullCalendar from '@fullcalendar/react'
+import { useEffect } from "react";
 import dayGridPlugin from '@fullcalendar/daygrid';
 
+const colorList = ['#f58742', '#f5d142', '#42adf5', '#7242f5'];
 export default function Dashboard({productions}) {
   useEffect(()=> {
+    const formattedProductions = productions.map((production) => {
+      const color = colorList.shift();
+      colorList.push(color);
+      return {
+        title: production.productName,
+        date: production.startDate.toISOString(),
+        end: production.endDate.toISOString(),
+        color
+      }
+    });
     const calendarContainer = document.querySelector('[data-calendar-container]');
     const calendar = new Calendar(calendarContainer, {
       plugins: [dayGridPlugin],
       editable: false,
       selectable: false,
       initialView: 'dayGridMonth',
-      events: [
-        {title: 'Sillon - Produccion 1', date: '2023-08-08', end: '2023-08-15', color: '#f58742'},
-        {title: 'Mesa - Produccion 2', date: '2023-08-06', end: '2023-08-9', color: '#f5d142'},
-        {title: 'Mueble - Produccion 3', date: '2023-08-05', end: '2023-08-05', color: '#42adf5'},
-        {title: 'Cama - Produccion 4', date: '2023-08-05', end: '2023-08-10', color: '#7242f5'}
-      ],
-      
+      events: formattedProductions,
     });
     
     calendar.render();
-  }, []);
+  }, [productions]);
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center">
