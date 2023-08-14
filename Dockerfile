@@ -27,6 +27,10 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
+RUN --mount=type=secret,id=ENV_FILE \
+  if [ -f /run/secrets/ENV_FILE ]; then cat /run/secrets/ENV_FILE > .env; \
+  fi
+
 RUN npm run build
 
 # If using npm comment out above and use below instead
