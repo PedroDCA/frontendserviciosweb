@@ -10,11 +10,12 @@ async function getProcessesByProductId(productId) {
   return processes.json();
 }
 
-export default function StartProduction({productList}) {
+export default function StartProduction({productList, materialList, workerList}) {
   const [products, setProducts] = useState(productList);
   const [selectedProductId, setSelectedProductId] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [processes, setProcesses] = useState([]);
+  const [ minimumDate, setMinimumDate] = useState('13-08-2023');
   useEffect(()=> {
     if (!selectedProductId) {
       return;
@@ -24,6 +25,7 @@ export default function StartProduction({productList}) {
     const newProcesses = getProcessesByProductId(selectedProductId);
     newProcesses.then((response) => setProcesses(response.productionProcesses));
   }, [selectedProductId]);
+
   useEffect(() => {
     if (processes.length === 0) {
       return;
@@ -46,7 +48,7 @@ export default function StartProduction({productList}) {
         </select>
       </div>
       <div className="d-flex flex-column justify-content-center align-items-center process_list w-100" data-process-list>
-        {isLoading ? <div>loading</div> : processes.map((process, index) => (<ExistingProcess processInformation={process} workerList={[]} key={index}/>))}
+        {isLoading ? <div>loading</div> : processes.map((process, index) => (<ExistingProcess processInformation={process} materialList={materialList} workerList={workerList} key={index}/>))}
       </div>
     </div>
   );
