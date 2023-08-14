@@ -1,3 +1,4 @@
+import createProductionPlanningEndpoint from "@/endpoints/productionEndpoints/createProductionPlanningEndpoint";
 import getAllProcessesByProductIdEndpoint from "@/endpoints/productionEndpoints/getAllProcessesByProductIdEndpoint";
 import getAllProductionsEndpoint from "@/endpoints/productionEndpoints/getAllProductionsEndpoint";
 
@@ -12,3 +13,9 @@ export const getAllProductions = async () => {
 
   return productionsFromAPI;
 }
+
+export const createProductionPlanning = async (materialInformation) => {
+  const response = await createProductionPlanningEndpoint(materialInformation);
+
+  return response; 
+};

@@ -1,10 +1,16 @@
 import CreateProduct from "@/components/pages/product/createProduct";
+import { getAllMaterials } from "@/services/materialService";
+import { getAllProcesses } from "@/services/processService";
 
-async function getTools(){
+async function getInformation(){
   'use server'
-  return await getAllTools();
+  const materialsPromise = getAllMaterials();
+  const processesPromise = getAllProcesses();
+
+  return Promise.all([materialsPromise, processesPromise]).then(([materials, processes]) => ({materials, processes}));
 }
 
 export default async function Page() {
-  return (<CreateProduct />);
+  const { materials, processes } = await getInformation();
+  return (<CreateProduct materialList={materials} processList={processes}/>);
 }

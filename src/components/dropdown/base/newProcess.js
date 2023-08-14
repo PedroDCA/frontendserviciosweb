@@ -7,7 +7,7 @@ function MaterialSection({materialList}) {
     <div className="d-flex align-items-center material_information mb-4">
       <div className="d-flex flex-column justify-content-center align-items-center option-line">
         <p>Material</p>
-        <select>
+        <select data-material-id>
           {materialList.map((material, index) => {
             return (<option value={material.id} key={index}>{material.name}</option>);
           })}
@@ -15,27 +15,13 @@ function MaterialSection({materialList}) {
       </div>
       <div className="d-flex flex-column justify-content-center align-items-center option-line">
         <p>Cantidad</p>
-        <input type="number" defaultValue={1}></input>
+        <input type="number" defaultValue={1} data-material-quantity></input>
       </div>
     </div>
   );
 }
 
-export default function NewProcess({id}) {
-  const materialList = [
-    {
-      id:1,
-      name: 'Madera'
-    },
-    {
-      id:2,
-      name: 'Pintura blanca'
-    },
-    {
-      id:3,
-      name: 'Pintura naranja'
-    }
-  ];
+export default function NewProcess({id, materialList, processList}) {
   const [materialRequiredSize, setMaterialRequiredSize] = useState(0);
   return (
     <div className="new_process d-flex flex-column justify-content-center align-items-center">
@@ -43,12 +29,17 @@ export default function NewProcess({id}) {
       <div className="collapse w-100" data-toggle-list>
         <ul className="btn-toggle-nav list-unstyled fw-normal p-4 small process_information">
           <li>
-            <div className="d-flex flex-column mb-3 option-line">
-              <p>Proceso por realizar</p>
-              <select className="w-50">
-                <option>Pintar</option>
-                <option>Lijar</option>
-              </select>
+            <div className='d-flex align-items-center material_information mb-4'>
+              <div className="d-flex flex-column mb-3 option-line">
+                <p>Proceso por realizar</p>
+                <select className="w-50" data-process>
+                  {processList.map((processInformation, index) => (<option value={processInformation.id} key={index}>{processInformation.name}</option>))}
+                </select>
+              </div>
+              <div className="d-flex flex-column justify-content-center align-items-center option-line">
+                <p>Minutos requeridos</p>
+                <input type="number" defaultValue={1} data-process-time></input>
+              </div>
             </div>
           </li>
           <li data-material-list>
