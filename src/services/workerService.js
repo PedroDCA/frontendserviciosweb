@@ -8,7 +8,6 @@ export const addNewWorker = async (workerInformation) => {
     workerId: response.id,
     wasWorkerCreated,
   };
-  console.log(data)
   return data; 
 };
 
