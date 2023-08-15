@@ -1,0 +1,59 @@
+.carousel-item,
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.black-text{
+  color: black;
+}
+
+.carousel-item{
+  background-color: white;
+}
+
+.homepage{
+  width: 100%;
+  padding-top: 5%;
+  padding-right: 5%;
+  height: 100%;
+}
+
+.homepage .button-section{
+  column-gap: 70px;
+  width: 50%;
+  height: 8%;
+
+}
+
+.big-title{
+  font-size: 50px;
+  font-weight: 700;
+  width: 60%;
+  text-align: center
+}
+
+.homepage .button-section button{
+  width: 40%;
+  font-weight: bold;
+}
+
+.carousel-item{
+  height: 80vh;
+}
+
+.carousel-indicators button{
+  background-color: #222222 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}

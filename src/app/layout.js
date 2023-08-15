@@ -1,5 +1,5 @@
-import Sidebar from '@/components/sidebar/sidebar'
-import './globals.css'
+import "bootstrap/dist/css/bootstrap.css";
+import './homepage.css'
 
 export const metadata = {
   title: 'Integration',
@@ -10,14 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className='d-flex flex-nowrap'>
-          <nav>
-            <Sidebar/>
-          </nav>
-          <main className="p-5 w-100">
-            {children}
-          </main>
-        </main>
+          {children}
       </body>
     </html>
   )
