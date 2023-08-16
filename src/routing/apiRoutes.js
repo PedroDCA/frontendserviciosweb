@@ -7,4 +7,5 @@ export const getWorkersApiUrl = '/api/worker/all';
 export const addToolApiUrl = '/api/tool/add';
 export const getToolsApiUrl = '/api/tool/all';
 export const getProcessesByProductIdUrl = '/api/production/processes';
+export const startProductionUrl = '/api/production/start';
 export const addProductionPlanning = '/api/production/createPlanning';
