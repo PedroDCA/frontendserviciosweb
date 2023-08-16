@@ -8,17 +8,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <main className='d-flex flex-nowrap'>
-          <nav>
-            <Sidebar/>
-          </nav>
-          <main className="p-5 w-100">
-            {children}
-          </main>
-        </main>
-      </body>
-    </html>
+    <div className='d-flex flex-nowrap'>
+      <nav>
+        <Sidebar/>
+      </nav>
+      <div className="p-5 w-100">
+        {children}
+      </div>
+    </div>    
   )
 }
