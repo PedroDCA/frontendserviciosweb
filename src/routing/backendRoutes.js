@@ -1,6 +1,6 @@
 const baseUrl = 'https://integrationbackendulacit.azurewebsites.net';
 export const logInUrl = `${baseUrl}/Session/Login`;
-export const signUpUrl = `${baseUrl}/Session/SignUp`;
+export const signUpUrl = `${baseUrl}/Session/Registration`;
 export const addMaterialUrl = `${baseUrl}/Material/AddMaterial`;
 export const getAllMaterialsUrl = `${baseUrl}/Material/GetAllMaterials`;
 export const updateMaterialUrl = `${baseUrl}/Material/EditMaterial`;

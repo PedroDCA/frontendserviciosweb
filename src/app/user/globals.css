@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  background-color: #F3F5F8;
+  background-color: rgb(204,213,174);
   overflow: auto;
 }
 
@@ -9,7 +9,7 @@ html {
   height: -webkit-fill-available;
 }
 
-main {
+.app {
   height: 100vh;
   height: -webkit-fill-available;
   max-height: 100vh;
@@ -58,13 +58,13 @@ main {
 .sidebar {
   width: 280px;
   height: 100vh;
-  background-color: #24344B;
+  background-color: rgb(40,54,24);
   position: sticky;
   top: 0;
 }
 
 .sidebar-list{
-  background-color: #2B3C58;
+  background-color: rgb(40,54,24);
 }
 
 .sidebar-list .btn{
@@ -72,11 +72,11 @@ main {
 }
 
 .sidebar-list .btn:not(.collapsed){
-  background-color: #3B4F6A !important;
+  background-color: rgba(254,250,224,0.1) !important;
 }
 
 .sidebar-list .collapsed{
-  background-color: #2B3C58 !important;
+  background-color: rgba(254,250,224,0.1)!important;
 }
 
 .white-color{

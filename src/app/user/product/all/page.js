@@ -8,7 +8,6 @@ async function getAllProducts() {
   const response = await fetch(`${hostname}${getAllProductsApiUrl}`, {
     method: 'GET',
   });
-  console.log("hola")
   return await response.json();
 }
 

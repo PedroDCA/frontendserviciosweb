@@ -4,7 +4,7 @@ const logInEndpoint = async (email, password) => {
   const encryptedPassword = crypto.subtle.digest("SHA-256", password);
   const data = {
     email,
-    password: encryptedPassword,
+    password,
   };
   const response = await fetch(logInUrl, {
     method: 'POST',
