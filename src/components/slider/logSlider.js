@@ -83,9 +83,9 @@ export default function LogSlider(){
     }
 
     return (
-        <div class={`container ${containerClasses}`} id="container">
+        <div className={`container ${containerClasses}`} id="container">
 
-        <div class="form-container register-container">
+        <div className="form-container register-container">
           <div className="form">
             <h1>Registrese aquí</h1>
             <input id="register_firstName" type="text" placeholder="Nombre"/>
@@ -93,42 +93,42 @@ export default function LogSlider(){
             <input id="register_email" type="email" placeholder="Correo"/>
             <input id="register_password" type="password" placeholder="Contraseña"/>
             <button onClick={registerHandler}>Registrarse</button>
-            <div class="social-container">
-              <a href="https://www.facebook.com/WoodworksFurnitureMadison/" class="social"><i class="lni lni-facebook-fill"></i></a>
-              <a href="https://www.pinterest.com/woodworkswi/" class="social"><i class="lni lni-pinterest-fill"></i></a>
-              <a href="https://woodworksfurniturestore.com/" class="social"><i class="lni lni-website-fill"></i></a>
+            <div className="social-container">
+              <a href="https://www.facebook.com/WoodworksFurnitureMadison/" className="social"><i className="lni lni-facebook-fill"></i></a>
+              <a href="https://www.pinterest.com/woodworkswi/" className="social"><i className="lni lni-pinterest-fill"></i></a>
+              <a href="https://woodworksfurniturestore.com/" className="social"><i className="lni lni-website-fill"></i></a>
             </div>
           </div>
         </div>
     
-        <div class="form-container login-container">
+        <div className="form-container login-container">
           <div className="form">
             <h1>Iniciar Sesión</h1>
             <input id="login_email" type="email" placeholder="Correo"/>
             <input id="login_password" type="password" placeholder="Contraseña"/>
             <button onClick={loginHandler}>Ingresar</button>
-            <div class="social-container">
-              <a href="https://www.facebook.com/WoodworksFurnitureMadison/" class="social"><i class="lni lni-facebook-fill"></i></a>
-              <a href="https://www.pinterest.com/woodworkswi/" class="social"><i class="lni lni-pinterest-fill"></i></a>
-              <a href="https://woodworksfurniturestore.com/" class="social"><i class="lni lni-website-fill"></i></a>
+            <div className="social-container">
+              <a href="https://www.facebook.com/WoodworksFurnitureMadison/" className="social"><i className="lni lni-facebook-fill"></i></a>
+              <a href="https://www.pinterest.com/woodworkswi/" className="social"><i className="lni lni-pinterest-fill"></i></a>
+              <a href="https://woodworksfurniturestore.com/" className="social"><i className="lni lni-website-fill"></i></a>
             </div>
           </div>
         </div>
     
-        <div class="overlay-container">
-          <div class="overlay">
-            <div class="overlay-panel overlay-left">
-              <h1 class="title">¿Ya tienes <br/> una cuenta?</h1>
+        <div className="overlay-container">
+          <div className="overlay">
+            <div className="overlay-panel overlay-left">
+              <h1 className="title">¿Ya tienes <br/> una cuenta?</h1>
               <p>si es así<br/> ¡Inicia sesión aquí!</p>
-              <button class="ghost" onClick={()=>setContainerClasses("")} id="login">Ingresar
-                <i class="lni lni-arrow-left login"></i>
+              <button className="ghost" onClick={()=>setContainerClasses("")} id="login">Ingresar
+                <i className="lni lni-arrow-left login"></i>
               </button>
             </div>
-            <div class="overlay-panel overlay-right">
-              <h1 class="title">Crea tu <br/> cuenta aquí</h1>
+            <div className="overlay-panel overlay-right">
+              <h1 className="title">Crea tu <br/> cuenta aquí</h1>
               <p>si todavía no tienes una cuenta, únete para empezar a crear tus productos</p>
-              <button class="ghost" onClick={()=>setContainerClasses("right-panel-active")} id="register">Registrarse
-                <i class="lni lni-arrow-right register"></i>
+              <button className="ghost" onClick={()=>setContainerClasses("right-panel-active")} id="register">Registrarse
+                <i className="lni lni-arrow-right register"></i>
               </button>
             </div>
           </div>
