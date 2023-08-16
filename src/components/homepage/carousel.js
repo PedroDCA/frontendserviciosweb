@@ -28,6 +28,12 @@ export default function Carousel(){
         <div className="carousel-item">
           <Image src={Carousel3} className="carousel-image" alt="Imagen de mueble"/>
         </div>
+        <div className="carousel-item">
+          <Image src={Carousel4} className="carousel-image" alt="Imagen de mueble"/>
+        </div>
+        <div className="carousel-item">
+          <Image src={Carousel5} className="carousel-image" alt="Imagen de mueble"/>
+        </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
