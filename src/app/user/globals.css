@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  background-color: #F3F5F8;
+  background-color: rgb(204,213,174);
   overflow: auto;
 }
 
@@ -9,7 +9,7 @@ html {
   height: -webkit-fill-available;
 }
 
-main {
+.app {
   height: 100vh;
   height: -webkit-fill-available;
   max-height: 100vh;
@@ -55,32 +55,51 @@ main {
   overflow-y: auto;
 }
 
+/*sidebar css */
+.signout a{
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+
 .sidebar {
   width: 280px;
   height: 100vh;
-  background-color: #24344B;
+  background-color: rgb(246,244,240);
   position: sticky;
   top: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar-list{
-  background-color: #2B3C58;
+.sidebar-list {
+  background-color: rgb(246,244,240);
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
 }
+
+.sidebar-list li:last-of-type{
+  margin-top: auto;
+}
+
 
 .sidebar-list .btn{
   width: 100%;
 }
 
 .sidebar-list .btn:not(.collapsed){
-  background-color: #3B4F6A !important;
+  background-color: rgba(204,213,174,0.5) !important;
 }
 
 .sidebar-list .collapsed{
-  background-color: #2B3C58 !important;
+  background-color: rgba(204,213,174,0.5)!important;
 }
 
 .white-color{
-  color: white !important;
+  font-family: "Poppins", sans-serif;
+  color: rgb(40,54,24) !important;
 }
 
 .content-container{
@@ -178,3 +197,180 @@ main {
   width: 75%;
   height: 80%;
 }
+
+/*Home page CSS */
+
+/** * Set up our wrapper element (float clearing etc). */
+.foo {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25) inset;
+}
+/** * Set up modifiers for different amounts of content. */
+.foo--two-items > .foo__item {
+  width: 50%;
+}
+.foo--three-items > .foo__item {
+  width: 33.333%;
+}
+.foo--four-items > .foo__item {
+  width: 25%;
+}
+.foo--five-items > .foo__item {
+  width: 20%;
+}
+/** * Style up our items. */
+.foo__item {
+  float: left;
+  padding: 1em;
+  border-width: 0 1px;
+  border-style: solid;
+  border-right-color: rgba(0, 0, 0, 0.25);
+  border-left-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.foo__item:first-child {
+  border-left-width: 0;
+}
+.foo__item:last-child {
+  border-right-width: 0;
+}
+/** * Set up hover effects;
+all non-hovered items get 5% narrower. */
+.foo--two-items:hover > .foo__item {
+  width: 45%;
+}
+.foo--two-items .foo__item:hover {
+  width: 55%;
+}
+.foo--three-items:hover > .foo__item {
+  width: 28.333%;
+}
+.foo--three-items .foo__item:hover {
+  width: 43.333%;
+}
+.foo--four-items:hover > .foo__item {
+  width: 20%;
+}
+.foo--four-items .foo__item:hover {
+  width: 40%;
+}
+.foo--five-items:hover > .foo__item {
+  width: 15%;
+}
+.foo--five-items .foo__item:hover {
+  width: 40%;
+}
+
+
+/* homepage.css */
+.carousel-item,
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-image {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+.black-text {
+  color: black;
+}
+
+.carousel-item {
+  background-color: white;
+  height: 60vh;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.homepage-content {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.big-title {
+  font-size: 60px; /* Increase font size for a huge title */
+  font-weight: 700;
+  margin: 0 auto; /* Center the title horizontally */
+  color: rgb(40, 54, 24);
+  font-family: "Montserrat", sans-serif; /* Use the Montserrat font-family */
+  text-align: center; /* Center the text within the container */
+  text-transform: uppercase; /* Make the text all uppercase for a more "llamativo" appearance */
+}
+
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-section button {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.button-section .btn-primary {
+  background-color: rgb(77, 119, 78);
+  border-color: rgb(77, 119, 78);
+}
+
+.button-section .btn-secondary {
+  background-color: rgb(157, 200, 141);
+  border-color: rgb(157, 200, 141);
+  color: rgb(19, 19, 19);
+}
+
+.carousel-container {
+  width: 100%;
+  height: 80%;
+}
+
+.carousel-indicators button {
+  background-color: #222222 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+/*Calendar css */
+
+#calendar a{
+  color: rgb(40,54,24) !important;
+}
+
+.calendarTitle{
+  font-family: "Poppins", sans-serif;
+  font-size: 35px; /* Increase font size for a huge title */
+  font-weight: 700;
+  color: rgb(40, 54, 24);
+  text-align: center; /* Center the text within the container */
+  text-transform: uppercase; /* Make the text all uppercase for a more "llamativo" appearance */
+  margin: 0 auto; /* Center the title horizontally */
+}
+

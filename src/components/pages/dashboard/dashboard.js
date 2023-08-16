@@ -12,8 +12,8 @@ export default function Dashboard({productions}) {
       colorList.push(color);
       return {
         title: production.productName,
-        date: production.startDate.toISOString(),
-        end: production.endDate.toISOString(),
+        date: production.startDate,
+        end: production.endDate,
         color
       }
     });
@@ -31,10 +31,10 @@ export default function Dashboard({productions}) {
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center">
-        <h2 className="p-4">Producciones en proceso</h2>
+        <h2 className="calendarTitle">Producciones en proceso</h2>
       </div>
       <div className="d-flex justify-content-center align-items-center">
-        <div data-calendar-container></div>
+        <div id="calendar" data-calendar-container></div>
       </div>
     </div>
   );

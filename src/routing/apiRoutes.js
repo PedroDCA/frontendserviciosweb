@@ -9,3 +9,5 @@ export const getToolsApiUrl = '/api/tool/all';
 export const getProcessesByProductIdUrl = '/api/production/processes';
 export const startProductionUrl = '/api/production/start';
 export const addProductionPlanning = '/api/production/createPlanning';
+export const loginUrl = '/api/session/login';
+export const registerUrl = '/api/session/register';

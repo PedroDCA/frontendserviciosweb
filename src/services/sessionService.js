@@ -9,8 +9,12 @@ import signUpEndpoint from '../endpoints/sessionEndpoints/signUpEndpoint';
  */
 export const logInUser = async (email, password) => {
   const response = await logInEndpoint(email, password);
-  const wasUserLoggedIn = response.Successful;
-  return wasUserLoggedIn;
+  const isSuccessful = response.success;
+  const message = isSuccessful ? "Iniciando sesión..." : "Contraseña o correo incorrecto.";
+  const loginInformation = {
+    done:isSuccessful, message
+  }
+  return loginInformation;
 }
 
 /**
@@ -19,12 +23,12 @@ export const logInUser = async (email, password) => {
  * @param {string} password String related to the user password.
  * @returns A boolean value indicating whether the user logs in succesfully.
  */
-export const signUpUser = async (email, password, name, lastName, roleId) => {
-  const response = await signUpEndpoint(email, password, name, lastName, roleId);
-  const data = {
-    userId: response.Id,
-    wasUserSignUp: response.Successful,
-    error: response.Error,
-  };
-  return data;
+export const signUpUser = async (email, password, name, lastName) => {
+  const response = await signUpEndpoint(email, password, name, lastName);
+  const isSuccessful = response.id > 0;
+  const message = isSuccessful ? "Registro completado, iniciando al sistema..." : "No se ha podido registrar el usuario, intentelo de nuevo.";
+  const loginInformation = {
+    done:isSuccessful, message
+  }
+  return loginInformation;
 }
