@@ -12,20 +12,20 @@ export default function Homepage() {
   return (
     <div>
         <h1 className="big-title">WELCOME TO INTEGRATION</h1>
-        <ul class="foo  foo--five-items">
-            <li class="foo__item  h-100">
+        <ul className="foo  foo--five-items">
+            <li className="foo__item  h-100">
                 <Image src={Carousel1} className="carousel-image h-100" alt="Imagen de mueble"/>
             </li>
-            <li class="foo__item h-100">
+            <li className="foo__item h-100">
                 <Image src={Carousel2} className="carousel-image h-100" alt="Imagen de mueble"/>
             </li>
-            <li class="foo__item h-100">
+            <li className="foo__item h-100">
             <Image src={Carousel3} className="carousel-image h-100" alt="Imagen de mueble"/>
             </li>
-            <li class="foo__item h-100">
+            <li className="foo__item h-100">
             <Image src={Carousel4} className="carousel-image h-100" alt="Imagen de mueble"/>
             </li>
-            <li class="foo__item h-100">
+            <li className="foo__item h-100">
             <Image src={Carousel5} className="carousel-image h-100" alt="Imagen de mueble"/>
             </li>
         </ul>
