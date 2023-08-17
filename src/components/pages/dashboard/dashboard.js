@@ -6,6 +6,9 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 
 /**
  * Gets the end date for the calendar.
+ * Special mention to FullCalendar for the Calendar component.
+ * https://fullcalendar.io/
+ * https://github.com/fullcalendar/fullcalendar
  * @param {string} stringStartDate String related to the start date.
  * @param {string} stringEndDate String related to the end date.
  * @returns A string with the end date to be used on the calendar.

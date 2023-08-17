@@ -9,12 +9,15 @@ import Carousel5 from "../image/carousel5.jpg"
 
 /**
  * Gets the component for the user home page.
+ * Special mention to HelloCodeLab and Neofyt for the ideas for this page.
+ * https://github.com/hellocodelab/elastic-accordion-restaurant-menu-list
+ * https://jsfiddle.net/Neofyt/GbrE5/
  * @returns The component for the user home page.
  */
 export default function Homepage() {
   return (
     <div>
-      <h1 className="big-title">WELCOME TO INTEGRATION</h1>
+      <h1 className="big-title">BIENVENIDO A INTEGRATION</h1>
       <ul className="foo  foo--five-items">
         <li className="foo__item  h-100">
           <Image src={Carousel1} priority={true} className="carousel-image h-100" alt="Imagen de mueble"/>
