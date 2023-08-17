@@ -1,6 +1,10 @@
 import { addToolUrl } from "@/routing/backendRoutes";
 
-
+/**
+ * Creates a new tool.
+ * @param {object} toolInformation Information related to the tool.
+ * @returns A confirmation.
+ */
 const addToolEndpoint = async (toolInformation) => {
   const data = {
     name: toolInformation.name,

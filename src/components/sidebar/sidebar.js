@@ -63,6 +63,10 @@ const productionChainOption = {
 
 const optionList = [dashboardOption, workersOption, toolsOption, materialsOption, productionChainOption];
 
+/**
+ * Gets the side bar section.
+ * @returns The side bar component.
+ */
 export default function Sidebar() {
   useEffect(() => {
     require('../../events/dropdown/base/collapseToggle');
@@ -74,7 +78,7 @@ export default function Sidebar() {
       </a>
       <ul className="list-unstyled ps-0 sidebar-list">
         {optionList.map((option, index) => {
-          return (<ExpandableOption optionInformation={option} key={index} position={index}/>)
+          return (<ExpandableOption optionInformation={option} key={index}/>)
         })}
         <li className="border-top my-3"></li>
         <li className="mb-1 signout ">

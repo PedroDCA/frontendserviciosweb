@@ -1,5 +1,9 @@
 import { Collapse } from 'bootstrap';
 
+/**
+ * Toggle to open or close a dropdown.
+ * @param {Event} event Event triggered.
+ */
 function toggleDropdown(event){
   const elementClicked = event.target;
   if (!elementClicked.hasAttribute('data-toggle-button')) {

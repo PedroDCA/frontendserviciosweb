@@ -6,6 +6,11 @@ import { addWorkerApiUrl, getWorkersApiUrl } from "@/routing/apiRoutes";
 import { getRoleById } from "@/services/roleService";
 import { useEffect, useState } from "react";
 
+/**
+ * Gets the component for the worker list section.
+ * @param {Array} initialWorkers List of current workers.
+ * @returns The component related to the worker list.
+ */
 export default function WorkerList({initialWorkers}) {
   const [workers, setWorkers] = useState(initialWorkers || []);
   const [isNewWorkerModalOpened, setIsNewWorkerModalOpened] = useState(false);

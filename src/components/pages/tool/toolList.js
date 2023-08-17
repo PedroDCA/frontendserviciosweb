@@ -5,6 +5,11 @@ import NewInventoryModal from "@/components/modals/base/newInventoryModal";
 import { addToolApiUrl, getToolsApiUrl } from "@/routing/apiRoutes";
 import { useEffect, useState } from "react";
 
+/**
+ * Gets the tool list section.
+ * @param {Array} initialTools List of current tools.
+ * @returns The component related to the tool list section.
+ */
 export default function ToolList({initialTools}) {
   const [tools, setTools] = useState(initialTools || []);
   const [isNewToolModalOpened, setIsNewToolModalOpened] = useState(false);

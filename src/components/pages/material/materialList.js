@@ -6,6 +6,11 @@ import UpdateInventoryModal from "@/components/modals/base/updateInventoryModal"
 import { addMaterialApiUrl, getAllMaterialsApiUrl, updateMaterialApiUrl } from "@/routing/apiRoutes";
 import { useEffect, useState } from "react";
 
+/**
+ * Gets the material list section.
+ * @param {Array} initialMaterials List of current materials.
+ * @returns The component for the material list page.
+ */
 export default function MaterialList({initialMaterials}) {
   const [materials, setMaterials] = useState(initialMaterials || []);
   const [isNewMaterialModalOpened, setIsNewMaterialModalOpened] = useState(false);

@@ -19,6 +19,13 @@ function getMaterialAvailabilityDictionary(materialList) {
   return materialAvailabilityDictionary;
 }
 
+/**
+ * Gets the start production section.
+ * @param {Array} productList List of current products.
+ * @param {Array} materialList List of current materials.
+ * @param {Array} workerList List of current workers.
+ * @returns The component related to the start production section
+ */
 export default function StartProduction({productList, materialList, workerList}) {
   const [products, setProducts] = useState(productList);
   const [selectedProductId, setSelectedProductId] = useState();

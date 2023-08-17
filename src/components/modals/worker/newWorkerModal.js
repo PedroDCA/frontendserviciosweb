@@ -5,6 +5,12 @@ import { getAllRoles } from "@/services/roleService";
 const roles = getAllRoles();
 const availableRoles = roles.filter(role => role.id !== 1);
 
+/**
+ * Gets the component for the new worker modal.
+ * @param {function} setNewWorkerInformation Function to set the worker information.
+ * @param {function} setIsNewWorkerModalOpened Function to set if new worker modal is opened.
+ * @returns The component for the new worker modal.
+ */
 export default function NewWorkerModal({setNewWorkerInformation, setIsNewWorkerModalOpened}) {
 
   function createButtonClick() {

@@ -1,3 +1,11 @@
+
+/**
+ * Gets the component related to the updating inventory modal.
+ * @param {string} inventoryName Inventory name
+ * @param {function} setNewInventoryInformation Function to set the inventory information.
+ * @param {function} setIsUpdatingInventoryModalOpened Function to set if updating inventory modal is opened.
+ * @returns The component related to updating inventory modal.
+ */
 export default function UpdateMaterialModal({inventoryName, setNewInventoryInformation, setIsUpdatingInventoryModalOpened}) {
   function saveChangesClick() {
     const modal = document.getElementById('updateModal');

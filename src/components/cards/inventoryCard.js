@@ -1,6 +1,18 @@
 'use client';
 
+/**
+ * Gets a card with the current item stock and be able to update it.
+ * @param {string} elementName Name to be shown.
+ * @param {Number} elementId Identifier for the element.
+ * @param {Number} elementQuantity The quantity for the item.
+ * @param {function} setIsUpdatingInventoryModalOpened Setter to define if the updating modal is opened.
+ * @returns 
+ */
 export default function InventoryCard({elementName, elementId, elementQuantity, setIsUpdatingInventoryModalOpened}){
+  /**
+   * Opens the updating modal.
+   * @param {Event} event Event that was triggered.
+   */
   function openUpdateModal(event) {
     const clickedElement = event.target;
     const { elementName, elementId } = clickedElement.dataset;
