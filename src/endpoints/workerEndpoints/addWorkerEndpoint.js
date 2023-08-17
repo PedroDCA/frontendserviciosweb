@@ -1,6 +1,10 @@
 import { addWorkerUrl } from "@/routing/backendRoutes";
 
-
+/**
+ * Saves a new worker.
+ * @param {object} workerInformation Worker information.
+ * @returns A confirmation.
+ */
 const addWorkerEndpoint = async (workerInformation) => {
   const data = {
     name: workerInformation.firstName,

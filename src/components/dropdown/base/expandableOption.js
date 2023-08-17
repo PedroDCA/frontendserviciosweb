@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-export default function ExpandableOption({optionInformation, position}){
+/**
+ * Gets an exapndable option with redirecting.
+ * @param {object} optionInformation Information related to the option to show.
+ * @returns The expandable option with redirects.
+ */
+export default function ExpandableOption({optionInformation}){
   const {title, options = []} = optionInformation;
   return (
     <li className="mb-1">

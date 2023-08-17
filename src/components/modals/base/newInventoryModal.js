@@ -1,3 +1,11 @@
+
+/**
+ * Gets the component related to the new inventory modal.
+ * @param {string} inventoryName Inventory name
+ * @param {function} setNewInventoryInformation Function to set the inventory information.
+ * @param {function} setIsNewInventoryModalOpened Function to set if new inventory modal is opened.
+ * @returns The component related to new inventory modal.
+ */
 export default function NewInventoryModal({inventoryName, setNewInventoryInformation, setIsNewInventoryModalOpened}) {
   function saveButtonClick() {
     const newInventoryModal = document.getElementById('newInventoryModal');

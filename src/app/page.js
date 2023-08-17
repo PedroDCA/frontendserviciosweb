@@ -1,8 +1,11 @@
 "use client";
 
 import LogSlider from "@/components/slider/logSlider";
-import Carousel from "../components/homepage/carousel";
 
+/**
+ * Gets the main home page.
+ * @returns The component for the main home page.
+ */
 export default function Homepage() {
   return (
     <div className="HomePage">

@@ -1,3 +1,8 @@
+/**
+ * Gets the material section component.
+ * @param {object} material Material information.
+ * @returns The material section component.
+ */
 function MaterialSection({material}) {
   return (
     <div className="d-flex align-items-center material_information mb-4">
@@ -14,6 +19,14 @@ function MaterialSection({material}) {
   );
 }
 
+/**
+ * Gets a dropdown to show information about an existing product process.
+ * @param {object} processInformation Information related to the product process.
+ * @param {Array} workerList List of current workers.
+ * @param {Object} materialDictionary List of materials.
+ * @param {function} setEnableSubmit Function to set if the product process is able to start.
+ * @returns The component for a existing process dropdown.
+ */
 export default function ExistingProcess({processInformation, workerList, materialDictionary, setEnableSubmit}) {
   const validWorkers = workerList.filter(worker => worker.roleId === processInformation.role.id);
   return (

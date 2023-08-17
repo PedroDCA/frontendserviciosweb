@@ -25,6 +25,12 @@ function getMaterialInformationFromMaterialSection(materialElement) {
   return { id, quantity };
 }
 
+/**
+ * Gets create a new product section.
+ * @param {Array} materialList List of current materials.
+ * @param {Array} processList List of current processes.
+ * @returns The component for the create product page.
+ */
 export default function CreateProduct({materialList, processList}) {
   const [processRequiredSize, setProcessRequiredSize] = useState(1);
   const [newProductionPlanningInformation, setNewProductionPlanningInformation] = useState();

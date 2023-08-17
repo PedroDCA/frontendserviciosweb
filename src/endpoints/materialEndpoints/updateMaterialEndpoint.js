@@ -1,6 +1,10 @@
 import { updateMaterialUrl } from "@/routing/backendRoutes";
 
-
+/**
+ * Updates the information of a material.
+ * @param {object} materialInformation Information about the material to add.
+ * @returns If material was saved.
+ */
 const updateMaterialEndpoint = async (materialInformation) => {
   const data = {
     id: materialInformation.id,

@@ -1,6 +1,11 @@
 import { addMaterialUrl } from "@/routing/backendRoutes";
 
 
+/**
+ * Adds a new material.
+ * @param {object} materialInformation Information about the material to add.
+ * @returns 
+ */
 const addMaterialEndpoint = async (materialInformation) => {
   const data = {
     name: materialInformation.name,

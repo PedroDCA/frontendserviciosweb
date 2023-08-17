@@ -6,6 +6,11 @@ export const metadata = {
   description: 'La aplicacion de Produccion de Integration',
 }
 
+/**
+ * 
+ * @param {Component} children The page component.
+ * @returns The layout for the user pages.
+ */
 export default function RootLayout({ children }) {
   return (
     <div className='d-flex flex-nowrap'>

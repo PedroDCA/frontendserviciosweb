@@ -21,6 +21,13 @@ function MaterialSection({materialList}) {
   );
 }
 
+/**
+ * Gets a component for a dropdown related to a new product process.
+ * @param {Number} id The identifier for the new process.
+ * @param {Array} materialList List of current materials.
+ * @param {Array} processList List of current process.
+ * @returns A component for a new product process dropdown.
+ */
 export default function NewProcess({id, materialList, processList}) {
   const [materialRequiredSize, setMaterialRequiredSize] = useState(0);
   return (

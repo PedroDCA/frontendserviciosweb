@@ -29,6 +29,10 @@ const fetchingMapper = {
     register:fetchNewUser
 }
 
+/**
+ * Gets the log slider section.
+ * @returns The log slider component.
+ */
 export default function LogSlider(){
     const router = useRouter();
     const [containerClasses, setContainerClasses] = useState("");
